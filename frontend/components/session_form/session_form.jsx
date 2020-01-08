@@ -35,6 +35,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
         let display;
         if (this.props.formType === 'login') {
             display = 'Log in to Stuttr'
@@ -42,17 +43,22 @@ class SessionForm extends React.Component {
             display = 'Sign up for Stuttr'
         }
         
+        let defaultText;
+        if (this.props.formType !== 'login') {
+            defaultText = 'Already a Stuttr member?'
+        } else {
+            defaultText = 'Not a Stuttr member?'
+        }
+
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                {display}
-          <br />
-                    Please {this.props.formType} or {this.props.navLink}
-                    {this.renderErrors()}
+                    {display}
+                    <br />
                     <div className="login-form">
                         <br />
                         <label>Username:
-              <input type="text"
+                            <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
@@ -60,13 +66,17 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <label>Password:
-              <input type="password"
+                            <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
-                            />
+                        />
                         </label>
                         <br />
+                        {/* Please {this.props.formType} or {this.props.navLink}
+                        {this.renderErrors()} */}
+                        {defaultText} {this.props.navLink}
+                        <br/>
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     </div>
                 </form>

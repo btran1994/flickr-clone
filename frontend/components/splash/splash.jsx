@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 const Splash = ({ currentUser, logout }) => {
     const sessionLinks = () => (
-        <nav className="login-signup">
-            <Link to="/login">Login</Link>
+        (<nav className="login-signup">
+            <Link className="login-button" to="/login">Login</Link>
             &nbsp;or&nbsp;
-      <Link to="/signup">Sign up!</Link>
-        </nav>
+        <Link className="signup-button" to="/signup">Sign up!</Link>
+        </nav>)
     );
     const personalGreeting = () => (
         <hgroup className="header-group">
@@ -19,6 +19,11 @@ const Splash = ({ currentUser, logout }) => {
     );
 
     return currentUser ? personalGreeting() : sessionLinks();
+    // if (currentUser) {
+    //     return personalGreeting;
+    // } else {
+    //     return sessionLinks;
+    // }
 };
 
 

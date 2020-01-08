@@ -1,0 +1,31 @@
+/* stylesheet for splash page i.e. login/signup */
+
+.splash-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+}
+
+.main {
+    width: 100%;
+}
+
+.login-button {
+    justify-self: right;
+}
+
+#root {
+    display: flex;
+}
+
+.login-form-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+
+.login-form-box {
+    position: relative;
+}
