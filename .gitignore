@@ -1,4 +1,4 @@
-node_modules/
+/node_modules/
 app/assets/javascripts/bundle.js 
 app/assets/javascripts/bundle.js.map
 
@@ -9,3 +9,4 @@ npm-debug.log
 log
 */bundle.js 
 */bundle.js.map
+node_modules
