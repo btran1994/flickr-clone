@@ -1,31 +1,242 @@
 /* stylesheet for splash page i.e. login/signup */
 
+.splash-main {
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+
+    position: fixed;
+}
+
 .splash-header {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
     width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login-signup a {
+    text-decoration: none;
+}
+
+.splash-header input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.splash-header > h1 {
+    color: white;
+    font-size: 40px;
+    margin-left: 20px;
+    padding: 3px;
 }
 
 .main {
+    display: flex;
     width: 100%;
 }
 
+.login-signup {
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
 .login-button {
-    justify-self: right;
+    margin: 10px;
+    
+}
+
+nav {
+    color: white;
+}
+.signup-button {
+    margin: 10px;
 }
 
 #root {
     display: flex;
+    height: 100vh;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    background-image: url('./images/wallhaven-6qmz6w.png');
+    background-position: center;
+    
 }
 
 .login-form-container {
+    /* justify-self: flex-end; */
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%;
+    top: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: transparent;
+    margin-top: 48px;
+    
+    /* background-color: blue; */
+    
    
 }
 
+.img {
+    height: 50px;
+}
+
 .login-form-box {
+    /* justify-self: center;
+    align-self: center; */
+    display: block;
     position: relative;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 20px;
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+
+}
+
+.login-form > label {
+    display: flex;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.format-username {
+    border: 1px black solid;
+    display: flex;
+    height: 50px;
+    border-radius: 5px;
+
+}
+
+.format-username:focus-within {
+    border: 1px blue solid;
+}
+
+.format-username:focus-within .username-box {
+    color: blue;
+    font-size: 15px;
+}
+
+.username-box {
+    margin-top: 5px;
+    margin-left: 5px;
+    justify-self: left;
+}
+
+.format-password {
+    border: 1px black solid;
+    display: flex;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.format-password:focus-within {
+    border: 1px blue solid;
+}
+
+.format-password:focus-within .password-box {
+    color: blue;
+    font-size: 15px;
+}
+
+.password-box {
+    margin-top: 5px;
+    margin-left: 5px;
+    justify-self: left;
+}
+
+.login-input {
+    margin: 10px;
+    border: none;
+    background: transparent;
+    width: 90%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input:focus {
+    outline:none;
+}
+
+.username-box{
+    align-content: center;
+    background: transparent;
+}
+
+.session-submit {
+    margin-top: 15px;
+    background-color: #128fdc;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.signup-button {
+    text-align: center;
+    display: inline-block;
+    color: black;
+    border: 1px white solid;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 80px;
+    line-height: 32px;
+}
+
+.login-button {
+    color: white;
+}
+
+.splash-header h1 {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-name {
+    margin-right: 30px;
+    color: white;
+}
+
+.demo-button {
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }

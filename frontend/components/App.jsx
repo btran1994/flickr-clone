@@ -6,16 +6,21 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-    <div className="main">
-        <header className="splash-header">
-            <h1>Stuttr?</h1>
-                <Route exact path='/' component={SplashContainer}/>
-        </header>
+    <div className="splash-main">
+        <div className="main">
+            <header className="splash-header">
+                <h1>Stuttr?</h1>
+                <Route exact path='/' component={SplashContainer} />
+            </header>
+        </div>
+        <div className="form-container">
             <Switch>
                 <AuthRoute path="/login" component={LoginFormContainer} />
                 <AuthRoute path="/signup" component={SignupFormContainer} />
             </Switch>
+        </div>
     </div>
+            
 );
 
 export default App;

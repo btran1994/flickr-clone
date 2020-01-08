@@ -7,8 +7,7 @@ const Splash = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         (<nav className="login-signup">
             <Link className="login-button" to="/login">Login</Link>
-            &nbsp;or&nbsp;
-        <Link className="signup-button" to="/signup">Sign up!</Link>
+            <Link className="signup-button" to="/signup">Sign up</Link>
         </nav>)
     );
     const personalGreeting = () => (
