@@ -11,6 +11,8 @@
 }
 
 .splash-header {
+    position: absolute;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     font-size: 20px;
@@ -70,7 +72,7 @@ nav {
     width: 100%;
     display: flex;
     height: 100vh;
-    background-image: url('./images/wallhaven-6qmz6w.png');
+    /* background-image: url('./images/wallhaven-6qmz6w.png'); */
     background-position: center;
     
 }
@@ -86,6 +88,7 @@ nav {
     display: flex;
     background: transparent;
     margin-top: 48px;
+    z-index: 100;
     
     /* background-color: blue; */
     
@@ -195,6 +198,7 @@ input:focus {
     margin-top: 15px;
     background-color: #128fdc;
     border: none;
+    border-radius: 5px;
     width: 100%;
     height: 40px;
     font-family: Arial, Helvetica, sans-serif;
@@ -210,6 +214,7 @@ input:focus {
     border-radius: 5px;
     min-width: 80px;
     line-height: 32px;
+    box-shadow: gray;
 }
 
 .login-button {
@@ -239,4 +244,162 @@ h6 {
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
     
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: 48px;
+}
+
+/* .footer a {
+    width: 100%;
+    height: 100%;
+} */
+
+/* .git-link {
+    max-height: 100%;
+    width: 48px;
+    z-index: 100;
+    background-image: url('./images//git_icon.jpg');
+    background-position: center;
+  
+} */
+
+
+.footer img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+
+/* SLIDESHOW CSS */
+
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+/* .cb-slideshow:after { 
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left; 
+} */
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 84s linear infinite 0s; 
+}
+
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 84s linear infinite 0s; 
+}
+.cb-slideshow li div h3 { 
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 240px;
+    padding: 0;
+    line-height: 200px; 
+}
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url('./images/wallhaven-6qmz6w.png');
+}
+
+.cb-slideshow li:nth-child(2) span {
+    background-image: url('./images/wallhaven-nr8y7q.jpg');
+    animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) span {
+    background-image: url('./images/wallhaven-w85rdr.jpg');
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url('./images/img04.jpg');
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url('./images/img05.png');
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+    background-image: url('./images/img06.jpg');
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(7) span {
+    background-image: url('./images/img07.jpg');
+    animation-delay: 36s;
+}
+.cb-slideshow li:nth-child(8) span {
+    background-image: url('./images/img08.jpg');
+    animation-delay: 42s;
+}
+.cb-slideshow li:nth-child(9) span {
+    background-image: url('./images/img09.png');
+    animation-delay: 48s;
+}
+.cb-slideshow li:nth-child(10) span {
+    background-image: url('./images/img10.jpg');
+    animation-delay: 54s;
+}
+.cb-slideshow li:nth-child(11) span {
+    background-image: url('./images/img11.jpg');
+    animation-delay: 60s;
+}
+.cb-slideshow li:nth-child(12) span {
+    background-image: url('./images/img12.jpg');
+    animation-delay: 66s;
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    4% { opacity: 1; animation-timing-function: ease-out; }
+    8% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+.footer div {
+    height: 100%;
+    width: 100%;
+}
+
+.fab.fa-github {
+    height: 20px;
+    width: 20px;
 }
