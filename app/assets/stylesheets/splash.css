@@ -73,7 +73,7 @@ nav {
     display: flex;
     height: 100vh;
     /* background-image: url('./images/wallhaven-6qmz6w.png'); */
-    background-position: center;
+    /* background-position: center; */
     
 }
 
@@ -280,8 +280,7 @@ h6 {
 /* SLIDESHOW CSS */
 
 
-.cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow{ 
     position: fixed;
     width: 100%;
     height: 100%;
@@ -289,10 +288,6 @@ h6 {
     left: 0px;
     z-index: 0; 
 }
-/* .cb-slideshow:after { 
-    content: '';
-    background: transparent url(../images/pattern.png) repeat top left; 
-} */
 
 .cb-slideshow li span { 
     width: 100%;
@@ -309,23 +304,6 @@ h6 {
     animation: imageAnimation 84s linear infinite 0s; 
 }
 
-.cb-slideshow li div { 
-    z-index: 1000;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    color: #fff;
-    animation: titleAnimation 84s linear infinite 0s; 
-}
-.cb-slideshow li div h3 { 
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 240px;
-    padding: 0;
-    line-height: 200px; 
-}
 
 .cb-slideshow li:nth-child(1) span {
     background-image: url('https://w.wallhaven.cc/full/96/wallhaven-967rgd.jpg');
@@ -385,14 +363,6 @@ h6 {
     100% { opacity: 0 }
 }
 
-@keyframes titleAnimation { 
-    0% { opacity: 0 }
-    8% { opacity: 1 }
-    17% { opacity: 1 }
-    19% { opacity: 0 }
-    100% { opacity: 0 }
-}
-
 
 .footer div {
     height: 100%;
@@ -402,4 +372,12 @@ h6 {
 .fab.fa-github {
     height: 20px;
     width: 20px;
+}
+
+.home-button {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 30px;
 }

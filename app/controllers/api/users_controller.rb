@@ -10,6 +10,12 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  # def show
+  #   @user = User.includes(photos: [{image_attachment: :blob}])
+  #   .find_by(id: params[:id])
+  #   render "api/users/show"
+  # end
+
   private
 
   def user_params

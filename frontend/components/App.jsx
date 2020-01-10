@@ -9,7 +9,7 @@ const App = () => (
     <div className="splash-main">
         {/* <div className="main"> */}
             <header className="splash-header">
-                <h1>Stuttr?</h1>
+                <a href="#/" className="home-button">Stuttr?</a>
                 <Route exact path='/' component={SplashContainer} />
             </header>
         {/* </div> */}
