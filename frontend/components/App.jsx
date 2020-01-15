@@ -1,65 +1,33 @@
 import React from "react";
 import SplashContainer from './splash/splash_container';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import PhotoIndexContainer from './photos/photo_container';
+import PhotoShowContainer from './photos/photo_show_container';
+import Splash from "./splash/splash";
 
 const App = () => (
     <div className="splash-main">
-        {/* <div className="main"> */}
-            <header className="splash-header">
-                <a href="#/" className="home-button">Stuttr?</a>
-                <Route exact path='/' component={SplashContainer} />
-            </header>
-        {/* </div> */}
-        <div className="form-container">
-            <Switch>
-                <AuthRoute path="/login" component={LoginFormContainer} />
-                <AuthRoute path="/signup" component={SignupFormContainer} />
-            </Switch>
-            <ul className="cb-slideshow">
-                <li>
-                    <span>Image 01</span>
-                </li>
-                <li>
-                    <span>Image 02</span>
-                </li>
-                <li>
-                    <span>Image 03</span>
-                </li>
-                <li>
-                    <span>Image 04</span>
-                </li>
-                <li>
-                    <span>Image 05</span>
-                </li>
-                <li>
-                    <span>Image 06</span>
-                </li>
-                <li>
-                    <span>Image 07</span>
-                </li>
-                <li>
-                    <span>Image 08</span>
-                </li>
-                <li>
-                    <span>Image 09</span>
-                </li>
-                <li>
-                    <span>Image 10</span>
-                </li>
-                <li>
-                    <span>Image 11</span>
-                </li>
-                <li>
-                    <span>Image 12</span>
-                </li>
-            </ul>
+        <header className="splash-header">
+            <a href="#/" className="home-button">Stuttr?</a>
+            <Route path='/' component={SplashContainer} />
+        </header>
+        <div className="default-background"></div>
+        
+        <Switch>
+            <ProtectedRoute exact path="/photos/:id" component={PhotoShowContainer} />
+            <AuthRoute exact path="/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <ProtectedRoute exact path="/photos" component={PhotoIndexContainer} />
+            <Route path='*'><Redirect to='/' /></Route>
+        </Switch>
+            
+            
             <footer className="footer">
-                <a href="https://github.com/btran1994" className="git-link"><img src="https://www.iconsdb.com/icons/preview/white/github-11-xxl.png"/></a>
+                <a href="https://github.com/btran1994" className="git-link"><img src={window.git}/></a>
             </footer>
-        </div>
         
     </div>
             

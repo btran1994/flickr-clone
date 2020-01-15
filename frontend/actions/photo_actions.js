@@ -32,14 +32,14 @@ export const clearPhotoErrors = () => ({
 
 export const fetchPhoto = id => dispatch => (
     PhotoAPIUtil.fetchPhoto(id).then(photo => (
-        dispatch(receivePhoto(id))
+        dispatch(receivePhoto(photo))
     ), err => (
         dispatch(receivePhotoErrors(err.responseJSON))
     ))
 );
 
-export const fetchPhotos = photos => dispatch => (
-    PhotoAPIUtil.fetchPhotos(photos).then(photos => (
+export const fetchPhotos = () => dispatch => (
+    PhotoAPIUtil.fetchPhotos().then(photos => (
         dispatch(receivePhotos(photos))
     ), err => (
         dispatch(receivePhotoErrors(err.responseJSON))

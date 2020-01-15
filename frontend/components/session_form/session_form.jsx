@@ -20,10 +20,16 @@ class SessionForm extends React.Component {
         let demoUser = { username: 'sendhelp', password: 'lifealert' };
         e.preventDefault();
         if (e.target.innerHTML === 'Demo Login') {
-            this.props.login(demoUser)
+            this.props.login(demoUser).then(() => {
+                this.props.history.push('/photos')
+            })
+            // console.log(this.props, 'session')
         } else {
             const user = Object.assign({}, this.state);
-            this.props.processForm(user);
+            console.log(this.state);
+            this.props.processForm(user).then(() => {
+                this.props.history.push('/photos');
+            })
         }
     }
 
@@ -61,9 +67,9 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h2>{display}</h2>
                     <br />
                     <div className="login-form">
+                    <h2 className="login-display">{display}</h2>
                         <br />
                         <div className="format-username">
                             <label className="username-box">Username</label>
@@ -82,14 +88,15 @@ class SessionForm extends React.Component {
                                 className="login-input"
                             />
                         </div>
-                        <p>{this.props.errors}</p>
-                        <br />
+                        <br/>
+                        <p className="errors">{this.props.errors[0]}</p>
                         {/* Please {this.props.formType} or {this.props.navLink}
                         {this.renderErrors()} */}
-                        {defaultText} {this.props.navLink}
-                        <br/>
                         <input className="session-submit" type="submit" value={buttonText} />
                         <button onClick={this.handleSubmit} className="demo-button">Demo Login</button>
+                        <br/>
+
+                        {defaultText} {this.props.navLink}
                     </div>
                 </form>
             </div>
