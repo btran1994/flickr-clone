@@ -8,10 +8,10 @@
 User.destroy_all
 Photo.destroy_all
 newUser = User.create({ username: 'sendhelp' ,  password: 'lifealert' })
-newUser.pfp.attach( io: File.open('/Users/meenya/Documents/wat.jpg'), filename: 'wat.jpg')
+# newUser.pfp.attach( io: File.open('/Users/meenya/Documents/wat.jpg'), filename: 'wat.jpg')
 
 user2 = User.create({ username: 'Hitswi', password: 'Trista12412400'})
-user2.pfp.attach( io: File.open('/Users/meenya/Documents/fu.jpg'), filename: 'fu.jpg')
+# user2.pfp.attach( io: File.open('/Users/meenya/Documents/fu.jpg'), filename: 'fu.jpg')
 
 
 photo1 = Photo.create({user_id: newUser.id, title: 'Gunslinger', description: "It's high noon :^)"})

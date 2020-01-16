@@ -4,14 +4,12 @@ class PhotoShow extends React.Component {
     constructor(props) {
         // console.log(props, 'props');
         super(props);
-        console.log(this.state, 'show state')
-        console.log(this.props, 'show props')
     }
 
     componentDidMount() {
         // console.log(this.props, 'jhgfchjk')
         // debugger;
-        let pic = this.props.fetchPhoto(this.props.id);
+        this.props.fetchPhoto(this.props.id);
         // console.log(pic, 'picture')
     }
 

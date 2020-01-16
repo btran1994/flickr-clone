@@ -10,7 +10,6 @@ const photoReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_PHOTO:
-            console.log('hi')
             nextState[action.photo.id] = action.photo
             return nextState;
         case RECEIVE_PHOTOS:

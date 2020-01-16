@@ -40,7 +40,7 @@ class Splash extends React.Component {
         
         // console.log(this.props.currentUser, 'currentUser')
         if (this.props.currentUser) {
-            console.log(this.state, 'check imageurl')
+            // console.log(this.state, 'check imageurl')
             return (
                 <div className="header-buttons">
                     <div className="header-group">
