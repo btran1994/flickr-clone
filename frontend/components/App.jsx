@@ -7,11 +7,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import PhotoIndexContainer from './photos/photo_container';
 import PhotoShowContainer from './photos/photo_show_container';
 import Splash from "./splash/splash";
+import Modal from './modal/modal';
 
 const App = () => (
     <div className="splash-main">
+        <Modal />
         <header className="splash-header">
-            <a href="#/" className="home-button">Stuttr?</a>
+            <a href="#/photos" className="home-button">Stuttr?</a>
             <Route path='/' component={SplashContainer} />
         </header>
         <div className="default-background"></div>

@@ -4,17 +4,19 @@ const _nullPhoto = Object.freeze({
     
 });
 
-const photoReducer = (state = _nullPhoto, action) => {
+const photoReducer = (state = {}, action) => {
     // console.log(action, 'action');
+    let nextState = Object.assign({}, state)
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_PHOTO:
             console.log('hi')
-            return { photo: action.photo};
+            nextState[action.photo.id] = action.photo
+            return nextState;
         case RECEIVE_PHOTOS:
             return action.photos;
         case REMOVE_PHOTO:
-            return _nullPhoto;
+            return nextState;
         default: 
             return state;
     }

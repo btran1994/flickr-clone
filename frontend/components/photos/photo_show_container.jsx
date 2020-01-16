@@ -5,12 +5,11 @@ import { fetchPhoto, fetchPhotos, clearPhotoErrors } from '../../actions/photo_a
 import PhotoShow from './photo_show';
 
 const mapState = (state, ownProps) => {
-    // debugger;
-    console.log(state, 'photo show state')
-    console.log(state.entities, 'ownprops')
-    console.log(state.entities.photos.photo, 'state photo')
+    console.log(state, 'container state')
+    console.log(ownProps, 'own props')
     return {
-        photo: state.entities.photos.photo,
+        currentUser: state.entities.users[state.session.id],
+        photo: state.entities.photos[ownProps.match.params.id],
         id: ownProps.match.params.id
     }
 };

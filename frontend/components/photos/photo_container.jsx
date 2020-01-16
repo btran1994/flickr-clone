@@ -6,7 +6,7 @@ import PhotoIndex from './photo_index';
 
 const mapState = state => {
     //debugger;
-    console.log(state, 'state')
+    // console.log(state, 'state')
     return {
         photos: Object.values(state.entities.photos)
     }

@@ -46,10 +46,11 @@ export const fetchPhotos = () => dispatch => (
     ))
 );
 
-export const uploadPhoto = photo => dispatch => (
-    PhotoAPIUtil.createPhoto(photo).then(photo => (
+export const createPhoto = photo => dispatch => (
+    PhotoAPIUtil.createPhoto(photo).then(photo => {
+        // debugger;
         dispatch(receivePhoto(photo))
-    ), err => (
+    }, err => (
         dispatch(receivePhotoErrors(err.responseJSON))
     ))
 );

@@ -1,9 +1,9 @@
 photo ||= @photo
 
-json.extract! photo, :title, :description, :id
+json.extract! photo, :title, :description, :id, :user_id, :user
 
 if photo.image.attached?
-    json.imageLink url_for(photo.image)
+    json.imageUrl url_for(photo.image)
 else
-    json.imageLink ""
+    json.imageUrl ""
 end
