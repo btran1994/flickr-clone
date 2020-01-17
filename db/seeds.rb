@@ -7,18 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-file = open('https://stuttr-dev.s3-us-west-1.amazonaws.com/image13.jpg')
-
-demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
-
 User.destroy_all
 Photo.destroy_all
 newUser = User.create({ username: 'sendhelp' ,  password: 'lifealert' })
 file = open('https://stuttr-dev.s3-us-west-1.amazonaws.com/wat.jpg')
-newUser.attach(io: file, filename: 'wat.jpg')
+newUser.pfp.attach(io: file, filename: 'wat.jpg')
 # newUser.pfp.attach( io: File.open('/Users/meenya/Documents/wat.jpg'), filename: 'wat.jpg')
 
 user2 = User.create({ username: 'Hitswi', password: 'Trista12412400'})
+file = open('https://stuttr-dev.s3-us-west-1.amazonaws.com/fu.jpg')
+user2.pfp.attach(io: file, filename: 'fu.jpg')
 # user2.pfp.attach( io: File.open('/Users/meenya/Documents/fu.jpg'), filename: 'fu.jpg')
 
 
