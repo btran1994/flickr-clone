@@ -28,7 +28,7 @@ Current functions:
 
 * Splash Page, protected routes
 
-![alt text](https://imgur.com/AqI55i2 "splash page")
+![alt text](https://i.imgur.com/AqI55i2 "splash page")
 
 * Photo Upload/Show/Index
 
@@ -63,7 +63,7 @@ handleUpload(e) {
     }
 ```
 
-![alt text](https://imgur.com/zfKyJGm "upload form/modal")
+![alt text](https://i.imgur.com/zfKyJGm "upload form/modal")
 
 Once a user has selected a photo and filled out the fields for title/description, those values are appended to a FormData object and passed to a function that creates an entry in the database with those same values.
 
