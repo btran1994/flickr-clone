@@ -28,7 +28,7 @@ Current functions:
 
 * Splash Page, protected routes
 
-![Splash](https://imgur.com/a/UvLdyYl)
+![Splash](https://imgur.com/AqI55i2)
 
 * Photo Upload/Show/Index
 
