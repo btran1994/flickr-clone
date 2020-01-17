@@ -31,7 +31,7 @@ photo2.image.attach(io: file3, filename: 'wallhaven-nr8y7q.jpg')
 
 photo3 = Photo.create({user_id: user2.id, title: 'Smoke', description: "We get it you vape"})
 file4 = open('https://stuttr-dev.s3-us-west-1.amazonaws.com/img04.jpg')
-photo3.attach(io: file4, filename: 'img04.jpg')
+photo3.image.attach(io: file4, filename: 'img04.jpg')
 # photo3.image.attach( io: File.open('/Users/meenya/Documents/img04.jpg'), filename: 'img04.jpg')
 
 photo4 = Photo.create({user_id: user2.id, title: 'Oni', description: "( ˘ ³˘)♥"})
