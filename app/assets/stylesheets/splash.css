@@ -670,9 +670,11 @@ h6 {
 
 .upload-form {
     /* position: absolute; */
+    margin-top: 10px;
     display: flex;
     width: 100%;
     flex-direction: column;
+    align-items: center;
 }
 
 .uploady {
@@ -680,6 +682,10 @@ h6 {
     width: 100%;
     flex-direction: column;
     border-radius: 5px;
+}
+
+.uploady h1 {
+    margin-left: 10px;
 }
 
 .img-preview {
@@ -703,6 +709,25 @@ textarea#styled {
 	border: 3px solid #cccccc;
 	padding: 5px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-input {
+    width: 80%;
+}
+
+.description-input {
+    width: 80%;
+}
+
+.upload-text {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.submit-photo:hover {
+    cursor: pointer;
+    background-color: lightblue;
+    border-radius: 5px;
 }
 
 /* PROFILE PIC CSS */

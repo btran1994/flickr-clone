@@ -4,7 +4,7 @@ class UploadForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.photo
-        console.log(this.props, 'props')
+        // console.log(this.props, 'props')
     }
 
     handleClick() {
@@ -28,15 +28,12 @@ class UploadForm extends React.Component {
     handleUpload(e) {
         e.preventDefault();
         const file = e.currentTarget.files[0];
-        console.log(file, 'file')
-        // console.log(this.state, 'state')
         const reader = new FileReader();
         reader.onloadend = () => {
             this.setState({imageUrl: reader.result, imageFile: file})
         }
 
         if (file) {
-            // console.log(file, 'file')
             reader.readAsDataURL(file)
         } else {
             console.log(this.state, 'invalid?')
@@ -45,7 +42,6 @@ class UploadForm extends React.Component {
         if (file) {
             console.log('hello')
         }
-        console.log(this.state, 'state')
         this.forceUpdate();
 
     }
@@ -55,20 +51,25 @@ class UploadForm extends React.Component {
     }
 
     render() {
-        console.log(this.state, 'imageurl')
+        // console.log(this.state, 'imageurl')
         return (
             <div className="uploady">
+                <h1 className="upload-text">Upload Photo:</h1>
                 <form onSubmit={this.handleSubmit.bind(this)} className="upload-form">
-                    <h1>Upload Photo:</h1>
-                    <label>
+                    <br/>
+                    <h1>
                         Title:
-                    </label>
-                        <input onChange={this.update('title')} type="text" name="title-input"/>
-                    <label>
+                    </h1>
+                    <input onChange={this.update('title')} type="text" className="title-input"/>
+                    <br/>
+                    <h1>
                         Description:
-                    </label>
-                        <textarea onChange={this.update('description')} name="description-input" id="" cols="30" rows="10"></textarea>
-                    <input type="submit" name="submit-photo" value="Upload Photo"/>
+                    </h1>
+                    <textarea onChange={this.update('description')} className="description-input" id="" cols="30" rows="10"></textarea>
+                    <br/>
+                    <input type="submit" className="submit-photo" value="Upload Photo"/>
+                    <br/>
+                    <br/>
                 </form>
                 <div>
                     <img className="upload" onClick={this.handleClick} src={window.blackUpload} alt="" />

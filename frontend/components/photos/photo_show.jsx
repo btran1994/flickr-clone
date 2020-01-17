@@ -22,7 +22,7 @@ class PhotoShow extends React.Component {
     render() {
         let photo = this.props.photo
         if (photo) {
-            // console.log(photo, 'photo')
+            console.log(photo, 'photo')
             return(
                 <ul className="photo-show">
                     <li className="photo-wrap">
