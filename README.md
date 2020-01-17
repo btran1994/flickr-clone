@@ -25,6 +25,11 @@ Current functions:
 
 ## Key Features
 * User Auth
+
+* Splash Page, protected routes
+
+![Splash](https://imgur.com/a/UvLdyYl)
+
 * Photo Upload/Show/Index
 
 Uses a modal to prompt user to browse their local files and allows them to upload. Utilizes a file reader to store the photo and its values in a slice of state.
@@ -57,6 +62,9 @@ handleUpload(e) {
 
     }
 ```
+
+![Photo Upload Form/Modal](https://imgur.com/zfKyJGm)
+
 Once a user has selected a photo and filled out the fields for title/description, those values are appended to a FormData object and passed to a function that creates an entry in the database with those same values.
 
 ## Modals
