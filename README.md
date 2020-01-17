@@ -22,9 +22,10 @@ Current functions:
 * Ruby on Rails
 * Active Storage
 * PostgreSQL
-* Key Features
+
+## Key Features
 * User Auth
-* Photo Upload
+* Photo Upload/Show/Index
 
 Uses a modal to prompt user to browse their local files and allows them to upload. Utilizes a file reader to store the photo and its values in a slice of state.
 
