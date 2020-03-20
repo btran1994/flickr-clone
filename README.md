@@ -2,7 +2,7 @@
 
 "Clone" of the site Flickr, used to store photos that users can upload and sort into groups/albums and more.
 
-[Live Demo](https://stuttr.herokuapp.com/#/)
+[Live Demo](http://stuttr-app.herokuapp.com/#/)
 
 Current functions:
 
